@@ -6,4 +6,7 @@
 <button (click)="onClick($event)">点我</button>
 
 <input value="Tom" (input)="doOnInput($event)">
+<!--#inputFiled1模板本地变量-->
+<input #inputFiled1 (keyup)="onkey(inputFiled1.value)">
+
 

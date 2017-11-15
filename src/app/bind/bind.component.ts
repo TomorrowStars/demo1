@@ -34,4 +34,8 @@ export class BindComponent implements OnInit {
     console.log(event.target.getAttribute('value'));
   }
 
+  onkey(value:string){
+    console.log(value);
+  }
+
 }
