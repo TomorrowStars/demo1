@@ -10,4 +10,22 @@
 <input #inputFiled1 (keyup)="onkey(inputFiled1.value)">模板本地变量
 <input [formControl]="searchInput">111
 
+<p>管道Demo</p>
+<p>我的生日是{{birthDay}}</p>
+<p>我的生日是{{birthDay | date}}</p>
+<p>我的生日是{{birthDay | date | lowercase}}</p>
+<p>我的生日是{{birthDay | date | uppercase}}</p>
+<p>我的生日是{{birthDay | date:'yyyy-MM-dd hh:mm:ss'}}</p>
+<p>圆周率是{{pi}}</p>
+<p>圆周率是{{pi | number: '2.1-2'}}</p>
+<p>试试我写的管道{{size | multiple: 2}}</p>
 
+<!--我的生日是Thu Nov 16 2017 13:56:06 GMT+0800 (中国标准时间)
+我的生日是Nov 16, 2017
+我的生日是nov 16, 2017
+我的生日是NOV 16, 2017
+我的生日是2017-11-16 01:56:44
+圆周率是3.1415926
+圆周率是03.14
+[number: '2.1-2']:2位整数，最小一位，最大2位小数，可以四舍五入
+-->
